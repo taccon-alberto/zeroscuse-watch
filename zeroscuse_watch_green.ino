@@ -97,8 +97,9 @@ tft.fillRect(
 
   tft.setCursor(textX, textY);
   tft.println(testo);
+  tft.println(x);
 }
 
 void loop() {
-
+    int x = analogRead(pin)
 }
