@@ -1,3 +1,30 @@
 - Cambiare font delle scritte
+
+
+// FONT
+#include <Fonts/FreeSansBold18pt7b.h>
+in setup:
+
+tft.setFont(&FreeSansBold18pt7b);
+
 - Aggiungere bordo dello schermo
+// BORDO SCHERMO
+
+for (int i = 0; i < 4; i++) {
+    tft.drawRoundRect(
+        0,
+        0,
+        240,
+        280,
+        12,
+        ST77XX_ORANGE
+    );
+}
+
 - Aggiungere nei render un valore fittizio rilevato
+
+uint16_t arancioneCustom = tft.color565(R, G, B)
+
+Poi lo usi come un normale colore:
+
+tft.fillScreen(arancioneCustom);
